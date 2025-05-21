@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,12 +62,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Company colors
+				// Company colors - updated to red
 				company: {
-					blue: '#1A365D',
-					lightblue: '#2B6CB0',
-					gray: '#718096',
-					lightgray: '#E2E8F0'
+					blue: '#ea384c',       // Main red color
+					lightblue: '#f06470',  // Lighter red for hover effects
+					gray: '#718096',       // Keeping the gray 
+					lightgray: '#E2E8F0'   // Keeping the light gray
 				}
 			},
 			borderRadius: {
