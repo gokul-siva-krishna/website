@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Database, Terminal, Microscope, Settings, Flask } from "lucide-react";
+import { Database, Terminal, Microscope, Settings, FlaskConical } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
       description: 'End-to-end automation of testing processes, reducing human error and increasing production efficiency.'
     },
     {
-      icon: <Flask className="h-12 w-12 text-company-blue" />,
+      icon: <FlaskConical className="h-12 w-12 text-company-blue" />,
       title: 'Technical Consulting',
       description: 'Expert guidance on test strategy development, system architecture, and process optimization.'
     }
