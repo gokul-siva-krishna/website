@@ -9,7 +9,10 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 relative">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-white animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Advanced Test Jig Solutions & LabVIEW Expertise</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="block">Apex Test Technologies</span>
+              <span className="text-3xl md:text-4xl mt-2 block">Advanced Test Jig Solutions & LabVIEW Expertise</span>
+            </h1>
             <p className="text-xl mb-8 opacity-90">
               Specialized custom test equipment design and development.
               Delivering precision engineering for your testing needs.

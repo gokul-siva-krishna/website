@@ -9,7 +9,12 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">TechJigs Solutions</h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center">
+                <span className="text-company-blue font-bold text-lg">ATT</span>
+              </div>
+              <h3 className="text-2xl font-bold">Apex Test Technologies</h3>
+            </div>
             <p className="mb-4 text-white/80 max-w-md">
               Specializing in test jig development and LabVIEW programming, 
               delivering innovative testing solutions for industries worldwide.
@@ -61,7 +66,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-white/20 text-center">
           <p className="text-white/80">
-            &copy; {currentYear} TechJigs Solutions. All rights reserved.
+            &copy; {currentYear} Apex Test Technologies. All rights reserved.
           </p>
         </div>
       </div>
