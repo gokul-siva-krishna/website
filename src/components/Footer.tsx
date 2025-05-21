@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -9,10 +8,8 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center">
-                <span className="text-company-blue font-bold text-lg">ATT</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img src="/lovable-uploads/9bdcde7e-f4ef-4457-a5e9-f1cff6a9f5ad.png" alt="Apex Test Technologies Logo" className="h-12" />
               <h3 className="text-2xl font-bold">Apex Test Technologies</h3>
             </div>
             <p className="mb-4 text-white/80 max-w-md">

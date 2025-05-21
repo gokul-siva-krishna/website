@@ -21,11 +21,9 @@ const Navbar: React.FC = () => {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-2 text-2xl font-bold text-company-blue">
-            <div className="h-10 w-10 rounded-full bg-company-blue flex items-center justify-center">
-              <span className="text-white font-bold text-lg">ATT</span>
-            </div>
-            <span>Apex Test Technologies</span>
+          <a href="#" className="flex items-center space-x-3 text-2xl font-bold text-company-blue">
+            <img src="/lovable-uploads/9bdcde7e-f4ef-4457-a5e9-f1cff6a9f5ad.png" alt="Apex Test Technologies Logo" className="h-12" />
+            <span className="hidden md:block">Apex Test Technologies</span>
           </a>
           
           <div className="md:hidden">
