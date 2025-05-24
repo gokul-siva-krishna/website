@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +22,10 @@ const Navbar: React.FC = () => {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-3 text-2xl font-bold text-company-blue">
+          <Link to="/" className="flex items-center space-x-3 text-2xl font-bold text-company-blue">
             <img src="/lovable-uploads/9bdcde7e-f4ef-4457-a5e9-f1cff6a9f5ad.png" alt="Apex Test Technologies Logo" className="h-12" />
             <span className="hidden md:block">Apex Test Technologies</span>
-          </a>
+          </Link>
           
           <div className="md:hidden">
             <Button 
@@ -42,7 +43,11 @@ const Navbar: React.FC = () => {
               <li><a href="#home" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Home</a></li>
               <li><a href="#services" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Services</a></li>
               <li><a href="#projects" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Projects</a></li>
-              <li><a href="#about" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">About</a></li>
+              <li>
+                <Link to="/about" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
+                  About
+                </Link>
+              </li>
               <li><a href="#contact" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Contact</a></li>
               <li className="md:ml-4 mt-4 md:mt-0">
                 <Button className="w-full md:w-auto bg-company-blue hover:bg-company-lightblue">

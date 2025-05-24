@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -37,9 +38,11 @@ const About: React.FC = () => {
                 <p className="text-gray-600">Expert Engineers</p>
               </div>
             </div>
-            <Button className="bg-company-blue hover:bg-company-lightblue">
-              Learn More About Us
-            </Button>
+            <Link to="/about">
+              <Button className="bg-company-blue hover:bg-company-lightblue">
+                Learn More About Us
+              </Button>
+            </Link>
           </div>
           
           <div className="relative">
