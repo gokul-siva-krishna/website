@@ -1,34 +1,41 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Database, Terminal, Microscope, Settings, FlaskConical } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services: React.FC = () => {
   const services = [
     {
       icon: <Microscope className="h-12 w-12 text-company-blue" />,
       title: 'Test Jig Development',
-      description: 'Custom design and fabrication of test jigs for production testing, quality assurance, and validation.'
+      description: 'Custom design and fabrication of test jigs for production testing, quality assurance, and validation.',
+      link: '/test-jig-development'
     },
     {
       icon: <Terminal className="h-12 w-12 text-company-blue" />,
       title: 'LabVIEW Programming',
-      description: 'Expert development of custom applications, data acquisition systems, and automated test solutions using NI LabVIEW.'
+      description: 'Expert development of custom applications, data acquisition systems, and automated test solutions using NI LabVIEW.',
+      link: '/labview-programming'
     },
     {
       icon: <Database className="h-12 w-12 text-company-blue" />,
       title: 'Data Acquisition Systems',
-      description: 'Implementation of sophisticated DAQ systems integrating hardware and software for real-time monitoring and analysis.'
+      description: 'Implementation of sophisticated DAQ systems integrating hardware and software for real-time monitoring and analysis.',
+      link: '/data-acquisition'
     },
     {
       icon: <Settings className="h-12 w-12 text-company-blue" />,
       title: 'Automation Solutions',
-      description: 'End-to-end automation of testing processes, reducing human error and increasing production efficiency.'
+      description: 'End-to-end automation of testing processes, reducing human error and increasing production efficiency.',
+      link: '/automation-solutions'
     },
     {
       icon: <FlaskConical className="h-12 w-12 text-company-blue" />,
       title: 'Technical Consulting',
-      description: 'Expert guidance on test strategy development, system architecture, and process optimization.'
+      description: 'Expert guidance on test strategy development, system architecture, and process optimization.',
+      link: '/technical-consulting'
     }
   ];
 
@@ -51,7 +58,12 @@ const Services: React.FC = () => {
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-company-blue">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Link to={service.link}>
+                    <Button variant="outline" className="text-company-blue border-company-blue hover:bg-company-blue hover:text-white">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

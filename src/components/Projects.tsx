@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -60,9 +61,11 @@ const Projects: React.FC = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Button className="bg-company-blue hover:bg-company-lightblue">
-            View All Projects
-          </Button>
+          <Link to="/projects">
+            <Button className="bg-company-blue hover:bg-company-lightblue">
+              View All Projects
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
