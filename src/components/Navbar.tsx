@@ -40,15 +40,31 @@ const Navbar: React.FC = () => {
 
           <nav className={`absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none ${mobileMenuOpen ? 'block' : 'hidden'} md:block transition-all duration-300 ease-in-out`}>
             <ul className="flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0">
-              <li><a href="#home" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Home</a></li>
-              <li><a href="#services" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Services</a></li>
-              <li><a href="#projects" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Projects</a></li>
+              <li>
+                <Link to="/" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
+                  Projects
+                </Link>
+              </li>
               <li>
                 <Link to="/about" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
                   About
                 </Link>
               </li>
-              <li><a href="#contact" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">Contact</a></li>
+              <li>
+                <Link to="/#contact" className="block py-2 text-company-blue hover:text-company-lightblue font-medium">
+                  Contact
+                </Link>
+              </li>
               <li className="md:ml-4 mt-4 md:mt-0">
                 <Button className="w-full md:w-auto bg-company-blue hover:bg-company-lightblue">
                   Get a Quote
