@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 bg-white shadow-md ${isScrolled ? 'py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 text-2xl font-bold text-company-blue">
