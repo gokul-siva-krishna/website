@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <p className="text-gray-700 mb-6">
               Founded in 2010, our company has been at the forefront of test engineering solutions, 
               specializing in custom test jig development and LabVIEW programming for clients across 
-              various industries including electronics, automotive, aerospace, and medical devices.
+              various industries including electronics, automotive, and  defence.
             </p>
             <p className="text-gray-700 mb-6">
               Our team of experienced engineers combines deep technical expertise with a 
@@ -22,7 +22,7 @@ const About: React.FC = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="text-2xl font-bold text-company-blue">10+</h4>
+                <h4 className="text-2xl font-bold text-company-blue">30+</h4>
                 <p className="text-gray-600">Years Experience</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm">

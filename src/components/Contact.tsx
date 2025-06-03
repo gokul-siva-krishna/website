@@ -40,8 +40,16 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Address</h4>
-                  <p className="text-white/80 mt-1">1234 Tech Parkway, Suite 500<br/>Innovation City, IC 98765</p>
+                  <a
+                    href="https://maps.app.goo.gl/z8UAJM851az4aLG38" // replace with your actual link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 mt-1 block hover:underline"
+                  >
+                    Home Garden Pg Accommodation 80 Feet Road, Bengaluru, Karnataka 560022
+                  </a>
                 </div>
+
               </div>
               
               <div className="flex items-start">
@@ -52,7 +60,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-white/80 mt-1">+1 (555) 123-4567</p>
+                  <p className="text-white/80 mt-1">+91XXXXXXXXXX</p>
                 </div>
               </div>
               
@@ -76,7 +84,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Business Hours</h4>
-                  <p className="text-white/80 mt-1">Monday - Friday: 9AM - 5PM<br/>Saturday & Sunday: Closed</p>
+                  <p className="text-white/80 mt-1">Monday - Friday: 9AM - 6:30PM<br/>Saturday & Sunday: Closed</p>
                 </div>
               </div>
             </div>
@@ -106,6 +114,11 @@ const Contact: React.FC = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                 <Textarea id="message" placeholder="Tell us about your project or inquiry..." rows={5} required />
               </div>
+              <div className="space-y-2">
+                <label htmlFor="attachment" className="block text-sm font-medium text-gray-700">Attachment (optional)</label>
+                <Input id="attachment" type="file" />
+              </div>
+
               
               <Button type="submit" className="w-full bg-company-blue hover:bg-company-lightblue">
                 Send Message

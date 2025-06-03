@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const stats = [
-    { icon: Clock, value: "10+", label: "Years Experience" },
+    { icon: Clock, value: "30+", label: "Years Experience" },
     { icon: Award, value: "200+", label: "Projects Completed" },
     { icon: Users, value: "50+", label: "Satisfied Clients" },
     { icon: Target, value: "15+", label: "Expert Engineers" }
