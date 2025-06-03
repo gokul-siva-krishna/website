@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
@@ -11,116 +12,162 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message sent",
+      title: "Message sent successfully! 🎉",
       description: "Thank you for your inquiry. We'll get back to you shortly.",
     });
   };
 
+  const contactInfo = [
+    {
+      icon: <MapPin className="h-6 w-6" />,
+      title: "Address",
+      content: "Home Garden Pg Accommodation 80 Feet Road, Bengaluru, Karnataka 560022",
+      link: "https://maps.app.goo.gl/z8UAJM851az4aLG38"
+    },
+    {
+      icon: <Phone className="h-6 w-6" />,
+      title: "Phone",
+      content: "+91XXXXXXXXXX",
+      link: "tel:+91XXXXXXXXXX"
+    },
+    {
+      icon: <Mail className="h-6 w-6" />,
+      title: "Email",
+      content: "info@techjigs-solutions.com",
+      link: "mailto:info@techjigs-solutions.com"
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "Business Hours",
+      content: "Monday - Friday: 9AM - 6:30PM\nSaturday & Sunday: Closed",
+      link: null
+    }
+  ];
+
   return (
-    <section id="contact" className="py-16">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="section-title mx-auto">Contact Us</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind or need technical assistance? Reach out to our team.
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="container-custom relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium mb-4 border border-white/20">
+            📧 Get In Touch
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Let's Start Your Project
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            Have a project in mind or need technical assistance? Reach out to our team of experts.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-company-blue text-white rounded-lg p-8">
-            <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="mr-4 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-medium">Address</h4>
-                  <a
-                    href="https://maps.app.goo.gl/z8UAJM851az4aLG38" // replace with your actual link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/80 mt-1 block hover:underline"
-                  >
-                    Home Garden Pg Accommodation 80 Feet Road, Bengaluru, Karnataka 560022
-                  </a>
-                </div>
-
-              </div>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
               
-              <div className="flex items-start">
-                <div className="mr-4 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-medium">Phone</h4>
-                  <p className="text-white/80 mt-1">+91XXXXXXXXXX</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="mr-4 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-medium">Email</h4>
-                  <p className="text-white/80 mt-1">info@techjigs-solutions.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="mr-4 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-medium">Business Hours</h4>
-                  <p className="text-white/80 mt-1">Monday - Friday: 9AM - 6:30PM<br/>Saturday & Sunday: Closed</p>
-                </div>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="group">
+                    {info.link ? (
+                      <a 
+                        href={info.link}
+                        target={info.link.startsWith('http') ? '_blank' : undefined}
+                        rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white/10 transition-all duration-300 group-hover:-translate-y-1"
+                      >
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                          {info.icon}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">{info.title}</h4>
+                          <p className="text-blue-100 whitespace-pre-line">{info.content}</p>
+                        </div>
+                      </a>
+                    ) : (
+                      <div className="flex items-start space-x-4 p-4">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-white">
+                          {info.icon}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">{info.title}</h4>
+                          <p className="text-blue-100 whitespace-pre-line">{info.content}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-company-blue">Send Us a Message</h3>
+          {/* Contact Form */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-8">Send Us a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
-                  <Input id="name" placeholder="John Doe" required />
+                  <label htmlFor="name" className="block text-sm font-medium text-white">Full Name</label>
+                  <Input 
+                    id="name" 
+                    placeholder="John Doe" 
+                    required 
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 focus:ring-blue-400/20 backdrop-blur-sm"
+                  />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                  <Input id="email" type="email" placeholder="john@example.com" required />
+                  <label htmlFor="email" className="block text-sm font-medium text-white">Email Address</label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com" 
+                    required 
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 focus:ring-blue-400/20 backdrop-blur-sm"
+                  />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-                <Input id="subject" placeholder="How can we help you?" required />
+                <label htmlFor="subject" className="block text-sm font-medium text-white">Subject</label>
+                <Input 
+                  id="subject" 
+                  placeholder="How can we help you?" 
+                  required 
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 focus:ring-blue-400/20 backdrop-blur-sm"
+                />
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                <Textarea id="message" placeholder="Tell us about your project or inquiry..." rows={5} required />
+                <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
+                <Textarea 
+                  id="message" 
+                  placeholder="Tell us about your project or inquiry..." 
+                  rows={5} 
+                  required 
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 focus:ring-blue-400/20 backdrop-blur-sm resize-none"
+                />
               </div>
-              <div className="space-y-2">
-                <label htmlFor="attachment" className="block text-sm font-medium text-gray-700">Attachment (optional)</label>
-                <Input id="attachment" type="file" />
-              </div>
-
               
-              <Button type="submit" className="w-full bg-company-blue hover:bg-company-lightblue">
+              <div className="space-y-2">
+                <label htmlFor="attachment" className="block text-sm font-medium text-white">Attachment (optional)</label>
+                <Input 
+                  id="attachment" 
+                  type="file" 
+                  className="bg-white/10 border-white/20 text-white file:bg-white/20 file:border-0 file:text-white file:rounded-md file:px-4 file:py-2 file:mr-4 focus:border-blue-400 focus:ring-blue-400/20 backdrop-blur-sm"
+                />
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Send className="mr-2 h-5 w-5" />
                 Send Message
               </Button>
             </form>
