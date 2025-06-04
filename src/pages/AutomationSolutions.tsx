@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle, Settings, ArrowRight, Cog, Robot, Shield, Zap, TrendingUp, Clock } from "lucide-react";
+import { ArrowLeft, CheckCircle, Settings, ArrowRight, Cog, Bot, Shield, Zap, TrendingUp, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AutomationSolutions = () => {
@@ -15,7 +14,7 @@ const AutomationSolutions = () => {
       description: "Complete automation solutions from design to implementation"
     },
     {
-      icon: <Robot className="h-6 w-6" />,
+      icon: <Bot className="h-6 w-6" />,
       title: "Robotic integration systems",
       description: "Seamless integration with robotic systems and equipment"
     },
